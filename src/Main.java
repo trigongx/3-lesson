@@ -31,7 +31,7 @@ public class Main {
 
 
         //Доп.задание
-        int n = digit.length;
+        /*int n = digit.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (digit[j] > digit[j + 1]) {
@@ -42,6 +42,22 @@ public class Main {
 
             }
             System.out.println("Выводим отсортированный массив с каждой итерацией" + Arrays.toString(digit));
+        }*/
+        int[] arr = {6, -7, 2, -4, 3, 8, -2};
+        for (int i = 0; i < arr.length; i++) {
+            int minNumber = arr[i];
+            int minId = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < minNumber) {
+                    minNumber = arr[j];
+                    minId = j;
+                }
+            }
+        int temp = arr[i];
+        arr[i] = minNumber;
+        arr[minId] = temp;
+
+            System.out.print(arr[i]+",");
         }
     }
 
